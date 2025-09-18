@@ -16,16 +16,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # API Keys
-groq_api_key = st.secrets("GROQ_API_KEY")
-os.environ["HF_TOKEN"] = st.secrets("HF_TOKEN")
+groq_api_key = st.secrets["GROQ_API_KEY"]
+os.environ["HF_TOKEN"] = st.secrets["HF_TOKEN"]
 #groq_api_key = os.getenv("GROQ_API_KEY")
 #os.environ["HF_TOKEN"] = os.getenv("HF_TOKEN")
 
 # Langsmith Tracking
-os.environ['LANGCHAIN_API_KEY'] = st.secrets("LANGCHAIN_API_KEY")
+os.environ['LANGCHAIN_API_KEY'] = st.secrets["LANGCHAIN_API_KEY"]
 #os.environ['LANGCHAIN_API_KEY'] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = st.secrets("LANGCHAIN_PROJECT")
+os.environ["LANGCHAIN_PROJECT"] = st.secrets["LANGCHAIN_PROJECT"]
 
 # Embedding
 embeddings = HuggingFaceEmbeddings(model_name= "all-MiniLM-L6-v2")
@@ -157,4 +157,5 @@ else:
 
 
 #st.caption("Made by Babuaa with 🎧")
+
 
