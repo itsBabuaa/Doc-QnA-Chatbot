@@ -25,7 +25,7 @@ os.environ["HF_TOKEN"] = st.secrets("HF_TOKEN")
 os.environ['LANGCHAIN_API_KEY'] = st.secrets("LANGCHAIN_API_KEY")
 #os.environ['LANGCHAIN_API_KEY'] = os.getenv("LANGCHAIN_API_KEY")
 os.environ["LANGCHAIN_TRACING_V2"] = "true"
-os.environ["LANGCHAIN_PROJECT"] = "Doc QnA ChatBot With Groq API"
+os.environ["LANGCHAIN_PROJECT"] = st.secrets("LANGCHAIN_PROJECT")
 
 # Embedding
 embeddings = HuggingFaceEmbeddings(model_name= "all-MiniLM-L6-v2")
@@ -154,5 +154,6 @@ if uploaded_files:
         #st.write("chat_history:", session_history.messages)
 else:
     st.info("👈 Please upload any PDF to continue!")
+
 
 #st.caption("Made by Babuaa with 🎧")
