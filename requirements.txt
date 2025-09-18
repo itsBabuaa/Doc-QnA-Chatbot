@@ -1,4 +1,4 @@
-langchain_chroma
+faiss-cpu
 langchain
 langchain_community
 langchain_groq
