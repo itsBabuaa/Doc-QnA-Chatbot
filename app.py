@@ -28,7 +28,7 @@ os.environ["LANGCHAIN_TRACING_V2"] = "true"
 os.environ["LANGCHAIN_PROJECT"] = st.secrets["LANGCHAIN_PROJECT"]
 
 # Embedding
-embeddings = HuggingFaceEmbeddings(model_name= "all-MiniLM-L6-v2")
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
 
 # LLM
 llm = ChatGroq(
@@ -157,5 +157,6 @@ else:
 
 
 #st.caption("Made by Babuaa with 🎧")
+
 
 
