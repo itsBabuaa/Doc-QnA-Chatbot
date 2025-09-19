@@ -34,7 +34,7 @@ It also supports **chat history**, enabling context-aware conversations.
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/qna-with-doc.git
+git clone https://github.com/itsbabuaa/qna-with-doc.git
 cd qna-with-doc
 ````
 
